@@ -1,32 +1,32 @@
 **Inverse seed generator (iSeed)** is a Laravel package that provides a method to generate a new seed file based on data from the existing database table.
 
-[![Build Status](https://travis-ci.org/orangehill/iseed.png)](http://travis-ci.org/orangehill/iseed)
-[![Latest Stable Version](https://poser.pugx.org/orangehill/iseed/v/stable.png)](https://packagist.org/packages/orangehill/iseed) [![Total Downloads](https://poser.pugx.org/orangehill/iseed/downloads.png)](https://packagist.org/packages/orangehill/iseed)
+[![Build Status](https://travis-ci.org/tawenxi/iseed.png)](http://travis-ci.org/tawenxi/iseed)
+[![Latest Stable Version](https://poser.pugx.org/tawenxi/iseed/v/stable.png)](https://packagist.org/packages/tawenxi/iseed) [![Total Downloads](https://poser.pugx.org/tawenxi/iseed/downloads.png)](https://packagist.org/packages/tawenxi/iseed)
 [![Analytics](https://ga-beacon.appspot.com/UA-1936460-35/iseed?useReferrer&flat)](https://github.com/igrigorik/ga-beacon)
 
 ## Installation
 
-1) Add `orangehill/iseed` to your composer file.
+1) Add `tawenxi/iseed` to your composer file.
 
 #### Laravel 5
-For Laravel 5 installation edit your project's `composer.json` file to require `orangehill/iseed`.
+For Laravel 5 installation edit your project's `composer.json` file to require `tawenxi/iseed`.
 
     "require": {
-		"orangehill/iseed": "dev-master"
+		"tawenxi/iseed": "dev-master"
 	}
 	
 #### Laravel 5 versions less than 5.3.8
 For Laravel 5 versions that are less than 5.3.8 edit your project's `composer.json` file to require `2.2` version:
 
     "require": {
-		"orangehill/iseed": "2.2"
+		"tawenxi/iseed": "2.2"
 	}
 	
 #### Laravel 4
 If you wish to install it on Laravel 4 you should require `1.1` version:
 
     "require": {
-		"orangehill/iseed": "1.1"
+		"tawenxi/iseed": "1.1"
 	}
 
 2) Update Composer from the CLI:
@@ -36,7 +36,7 @@ If you wish to install it on Laravel 4 you should require `1.1` version:
 #### Laravel 5 versions less than 5.5
 3) Add the service provider by opening a `app/config/app.php` file, and adding a new item to the `providers` array.
 
-    Orangehill\Iseed\IseedServiceProvider::class
+    tawenxi\Iseed\IseedServiceProvider::class
 
 ## Artisan command options
 
@@ -251,7 +251,7 @@ To limit number of rows that will be exported from table use Artisan Command Opt
 
 To (re)seed the database go to the Terminal and run Laravel's `db:seed command` (`php artisan db:seed`).
 
-Please note that some users encountered a problem with large DB table exports ([error when seeding from table with many records](https://github.com/orangehill/iseed/issues/4)). The issue was solved by splitting input data into smaller chunks of elements per insert statement. As you may need to change the chunk size value in some extreme cases where DB table has a large number of columns, the chunk size is configurable in iSeed's `config.php` file:
+Please note that some users encountered a problem with large DB table exports ([error when seeding from table with many records](https://github.com/tawenxi/iseed/issues/4)). The issue was solved by splitting input data into smaller chunks of elements per insert statement. As you may need to change the chunk size value in some extreme cases where DB table has a large number of columns, the chunk size is configurable in iSeed's `config.php` file:
 
 	'chunk_size' => 500 // Maximum number of rows per insert statement
 
