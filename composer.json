@@ -21,22 +21,22 @@
     },
     "autoload": {
         "psr-0": {
-            "tawenxi\\Iseed": "src/"
+            "Orangehill\\Iseed": "src/"
         },
         "classmap": [
-            "src/tawenxi/Iseed/Exceptions.php"
+            "src/Orangehill/Iseed/Exceptions.php"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            "tawenxi\\Iseed\\Tests\\": "tests"
+            "Orangehill\\Iseed\\Tests\\": "tests"
         }
     },
     "minimum-stability": "dev",
     "extra": {
         "laravel": {
             "providers": [
-                "tawenxi\\Iseed\\IseedServiceProvider"
+                "Orangehill\\Iseed\\IseedServiceProvider"
             ]
         }
     }
